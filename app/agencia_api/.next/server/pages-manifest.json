@@ -3,6 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/add-client": "pages/add-client.js",
-  "/home": "pages/home.js"
+  "/destino": "pages/destino.js",
+  "/cliente": "pages/cliente.js",
+  "/viagem": "pages/viagem.js"
 }
