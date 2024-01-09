@@ -11,10 +11,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Conexao com o banco
-string mySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<DataContext>(options =>
-options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
+string SqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(SqlConnection));
 //Cors
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 

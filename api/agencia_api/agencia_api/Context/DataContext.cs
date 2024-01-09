@@ -7,7 +7,7 @@ namespace agencia_api.Context
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
         public DbSet<Clientes> Clientes { get; set; }
-        //public DbSet<Destinos> Destinos { get; set; }
-        //public DbSet<Viagens> Viagens { get; set; }
+        public DbSet<Destinos> Destinos { get; set; }
+        public DbSet<Viagens> Viagens { get; set; }  
     }
 }

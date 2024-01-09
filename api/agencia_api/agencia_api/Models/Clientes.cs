@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace agencia_api.Models
 {
@@ -6,8 +7,13 @@ namespace agencia_api.Models
     {
         [Key]
         public int Id { get; set; }
-        public string nome { get; set; }
-        public string email { get; set; }
-        public string senha { get; set; }
+        public string Nome { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
+        public string Cpf { get; set; }
+        public string Telefone { get; set; }
+        [JsonIgnore]
+        public List<Viagens> Viagens { get; set; }
+
     }
 }

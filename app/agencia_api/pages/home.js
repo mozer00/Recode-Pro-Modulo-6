@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     // Faça uma chamada GET para a API Spring Boot
     axios
-      .get("https://localhost:7291/api/Clientes")
+      .get("http://agencia-api.somee.com/api/Clientes")
       .then((response) => {
         setClients(response.data);
       })
@@ -27,6 +27,8 @@ const Home = () => {
           <tr>
             <th>Id</th>
             <th>Nome</th>
+            <th>Cpf</th>
+            <th>Telefone</th>
             <th>Email</th>
             <th>Senha</th>
           </tr>
@@ -36,6 +38,8 @@ const Home = () => {
             <tr className={style.tabela}>
               <td>{elemento.id}</td>
               <td>{elemento.nome}</td>
+              <td>{elemento.cpf}</td>
+              <td>{elemento.telefone}</td>
               <td>{elemento.email}</td>
               <td>{elemento.senha}</td>
               <td>
